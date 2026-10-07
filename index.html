@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Name – Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e9eef2; --surface:#ffffff; --ink:#14213d; --muted:#4c5b78;
+  --accent:#2b4fff; --mark:#ffd23f; --line:#c5cfdb;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1626;--surface:#17213a;--ink:#e8edf7;--muted:#9fb0cf;--accent:#7f9bff;--mark:#ffd23f;--line:#2a3757}
+}
+:root[data-theme="dark"]{--bg:#0f1626;--surface:#17213a;--ink:#e8edf7;--muted:#9fb0cf;--accent:#7f9bff;--mark:#ffd23f;--line:#2a3757}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+header.hero{padding:5rem 0 4rem}
+.hero h1{font:800 clamp(2.8rem,9vw,6.5rem)/.95 var(--display);letter-spacing:-.03em;margin:0 0 1.5rem;max-width:14ch}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--mark) 62% 92%,transparent 92%);padding:0 .1em}
+.hero p{max-width:34rem;margin:0;color:var(--muted);font-size:1.2rem}
+.hero nav{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.4rem;font:500 1rem var(--body);text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--mark);color:#14213d;border-color:#14213d}
+
+main h2{font:700 1.75rem/1.2 var(--display);margin:0 0 1.5rem}
+.list{border-top:2px solid var(--ink)}
+.project{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr) minmax(0,.9fr);gap:1.5rem;padding:1.75rem .5rem;border-bottom:1px solid var(--line);transition:background .2s}
+.project:hover{background:var(--surface)}
+.project h3{font:700 1.5rem/1.15 var(--display);margin:0}
+.project h3 a{text-decoration:none}
+.project h3 a:hover{color:var(--accent)}
+.project p{margin:0;color:var(--muted)}
+.meta{display:flex;flex-direction:column;gap:.5rem;align-items:flex-start}
+.stack{display:flex;flex-wrap:wrap;gap:.35rem}
+.stack li{list-style:none;font-size:.85rem;padding:.1rem .6rem;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+ul.stack{margin:0;padding:0}
+.links a{font-weight:500;margin-right:1rem;text-decoration-thickness:2px;text-underline-offset:3px}
+.links a:hover{color:var(--accent)}
+
+section.about{padding:5rem 0 3rem;max-width:40rem}
+section.about p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+@media (max-width:760px){
+  header.hero{padding:3rem 0 2.5rem}
+  .project{grid-template-columns:1fr;gap:.75rem;padding:1.5rem 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <!-- EDIT: your name and a one-sentence description of what you build -->
+    <h1>I'm Your Name. I build <span>small, useful</span> software.</h1>
+    <p>Web apps, tools, and experiments. Here are the projects I'm proudest of, with live demos and source code.</p>
+    <nav aria-label="Primary">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="mailto:you@example.com">Email me</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="projects">Projects</h2>
+    <div class="list">
+
+      <!-- EDIT: copy this block for each project -->
+      <article class="project">
+        <h3><a href="https://example.com/taskboard">Taskboard</a></h3>
+        <p>A drag-and-drop kanban board that works offline and syncs when you reconnect. Built to replace the sticky notes on my monitor.</p>
+        <div class="meta">
+          <ul class="stack"><li>JavaScript</li><li>IndexedDB</li></ul>
+          <div class="links"><a href="https://example.com/taskboard">Live demo</a><a href="https://github.com/yourname/taskboard">Code</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://example.com/weatherwatch">Weatherwatch</a></h3>
+        <p>A command-line tool that texts you when rain is coming in the next hour. Runs on a Raspberry Pi for pennies a month.</p>
+        <div class="meta">
+          <ul class="stack"><li>Python</li><li>REST APIs</li></ul>
+          <div class="links"><a href="https://github.com/yourname/weatherwatch">Code</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://example.com/pixelpad">Pixelpad</a></h3>
+        <p>A browser-based pixel art editor with layers, palettes, and PNG export. No account needed.</p>
+        <div class="meta">
+          <ul class="stack"><li>HTML</li><li>Canvas</li><li>CSS</li></ul>
+          <div class="links"><a href="https://example.com/pixelpad">Live demo</a><a href="https://github.com/yourname/pixelpad">Code</a></div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <!-- EDIT: two or three sentences about you -->
+    <p>I'm a developer who likes turning annoying problems into tidy tools. I'm currently learning more about web performance and open to new opportunities.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Your Name</span>
+    <span><a href="https://github.com/yourname">GitHub</a> &nbsp; <a href="mailto:you@example.com">Email</a></span>
+  </div>
+</footer>
+</body>
+</html>
